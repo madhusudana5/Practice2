@@ -1,52 +1,34 @@
-package PojoClass;
+package pojoclass;
 
-public class Spouse
-{
-	 //step1: create variable
-	 String eName;
-	 String eId;
-	 int ePhone;
-	 
-	 
-//step2:create constructor
-	public Spouse(String eName, String eId, int ePhone) 
-	{
+public class Spouse {
+	String name;
+	String cname;
+	int phoneno;
+	
+	public Spouse(String name, String cname, int phoneno) {
 		super();
-		this.eName = eName;
-		this.eId = eId;
-		this.ePhone = ePhone;
+		this.name = name;
+		this.cname = cname;
+		this.phoneno = phoneno;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getCname() {
+		return cname;
+	}
+	public void setCname(String cname) {
+		this.cname = cname;
+	}
+	public int getPhoneno() {
+		return phoneno;
+	}
+	public void setPhoneno(int phoneno) {
+		this.phoneno = phoneno;
 	}
 	
-	public Spouse()
-	{
-		
-	}
-	
 
-	public String geteName() {
-		return eName;
-	}
-
-	public void seteName(String eName) {
-		this.eName = eName;
-	}
-
-	public String geteId() {
-		return eId;
-	}
-
-	public void seteId(String eId) {
-		this.eId = eId;
-	}
-
-	public int getePhone() {
-		return ePhone;
-	}
-
-	public void setePhone(int ePhone) {
-		this.ePhone = ePhone;
-	}
-
-	
-	
 }

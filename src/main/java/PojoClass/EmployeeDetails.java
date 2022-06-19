@@ -1,56 +1,53 @@
-package PojoClass;
+package pojoclass;
 
-/**
- * This class contains employee details
- * @author USER
- *
- */
-
-public class EmployeeDetails
-{
-	//Step1: Declare the required variables as global
-	String eName;
-	String eId;
-	int ePhone;
+public class EmployeeDetails {
+	
+	//Step 1: Declare the required fields globally 
+	
+	String ename;
+	String eid;
+	int phoneno;
 	String email;
 	
-	//Step2;
-	public EmployeeDetails(String eName, String eId, int ePhone, String email) {
+	//Step 2: Create a constructor to initialize
+	
+	public EmployeeDetails(String ename, String eid, int phoneno, String email) {
 		
-		this.eName = eName;
-		this.eId = eId;
-		this.ePhone = ePhone;
+		this.ename = ename;
+		this.eid = eid;
+		this.phoneno = phoneno;
 		this.email = email;
-		
 	}
 	
-	public EmployeeDetails() 
+	//used for deserialization - empty constructor is used to re-initialize the class
+	
+	public EmployeeDetails()
 	{
 		
 	}
 
-	public String geteName() {
-		return eName;
+	public String getEname() {
+		return ename;
 	}
 
-	public void seteName(String eName) {
-		this.eName = eName;
+	public void setEname(String ename) {
+		this.ename = ename;
 	}
 
-	public String geteId() {
-		return eId;
+	public String getEid() {
+		return eid;
 	}
 
-	public void seteId(String eId) {
-		this.eId = eId;
+	public void setEid(String eid) {
+		this.eid = eid;
 	}
 
-	public int getePhone() {
-		return ePhone;
+	public int getPhoneno() {
+		return phoneno;
 	}
 
-	public void setePhone(int ePhone) {
-		this.ePhone = ePhone;
+	public void setPhoneno(int phoneno) {
+		this.phoneno = phoneno;
 	}
 
 	public String getEmail() {
@@ -60,12 +57,4 @@ public class EmployeeDetails
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
-	
-	
-	
-	
-	
-	
-
 }

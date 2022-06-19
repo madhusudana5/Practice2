@@ -1,20 +1,22 @@
 package CrudWithoutBdd;
 
 import org.json.simple.JSONObject;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import io.restassured.response.Response;
+import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
 
-public class UpdateProject {
+public class CreateProjectTest {
 	
 	@Test
 	
-	 public void updateProjectTest()
-	 {
-		//Step 1: Create pre conditions
+	public void CreateProjectTest()
+	{
 		
+		//Step 1: Create pre conditions
 		JSONObject jObj= new JSONObject();
 		jObj.put("createdBy", "Raghu-RD");
 		jObj.put("projectName", "Amdocs");
@@ -25,8 +27,14 @@ public class UpdateProject {
 		req.body(jObj);
 		req.contentType(ContentType.JSON);
 		
-		req.put("http://localhost:8084/Project/TY_PROJ_812");
-		req.then().log().all();
-	 }
+		//Step 2: execute action
+		Response resp = req.post("http://localhost:8084/addProject");
+		
+		//Step 3: Validate the response
+		ValidatableResponse validate = resp.then();
+		validate.log().all();
+		
+
+	}
 
 }

@@ -1,30 +1,23 @@
-package CrudWithOutBdd;
+package CrudWithoutBdd;
 
-import static org.testng.Assert.assertEquals;
-
-import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import junit.framework.Assert;
 
-public class GetSingleProject
-{
-@Test
-public void getSingleProject()
-{
-	String expdata = "ARM";
+public class GetSingleProject {
 	
-	Response resp = RestAssured.get("http://localhost:8084/projects/datamegeena24");
-	resp.then().log().all();
+	@Test
 	
-	 String actdata = resp.jsonPath().get("createdBy");
-	 System.out.println(actdata);
-	 
-	 Assert.assertEquals(expdata, actdata);
-	 
-}
-
-
+	public void GetSingleProjectTest()
+	{
+		String expdata = "Raghu";
+		Response resp = RestAssured.get("http://localhost:8084/projects/TY_PROJ_812");
+		resp.then().log().all();
+		String actdata = resp.jsonPath().get("createdBy");
+		Assert.assertEquals(expdata, actdata);
+		
+	}
 
 }

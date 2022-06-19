@@ -1,62 +1,42 @@
-package PojoClass;
+package pojoclass;
 
-import org.testng.annotations.Test;
-
-public class ProjectLibrary 
-{
-		String createdBy;
-		String projectName;
-		String status;
-		int teamSize;
-		
-public ProjectLibrary(String createdBy, String projectName, String status, int teamSize)
-{
-			
-			this.createdBy = createdBy;
-			this.projectName = projectName;
-			this.status = status;
-			this.teamSize = teamSize;
-			
-		}
-
-public String getCreatedBy() {
-	return createdBy;
-}
-
-public void setCreatedBy(String createdBy) {
-	this.createdBy = createdBy;
-}
-
-public String getProjectName() {
-	return projectName;
-}
-
-public void setProjectName(String projectName) {
-	this.projectName = projectName;
-}
-
-public String getStatus() {
-	return status;
-}
-
-public void setStatus(String status) {
-	this.status = status;
-}
-
-public int getTeamSize() {
-	return teamSize;
-}
-
-public void setTeamSize(int teamSize) {
-	this.teamSize = teamSize;
-}
-
-
-		
-		
-}
-
+public class ProjectLibrary {
 	
-	
+	String name;
+	String company;
+	String id;
+	int teamsize;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getCompany() {
+		return company;
+	}
+	public void setCompany(String company) {
+		this.company = company;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public int getTeamsize() {
+		return teamsize;
+	}
+	public void setTeamsize(int teamsize) {
+		this.teamsize = teamsize;
+	}
+	public ProjectLibrary(String name, String company, String id, int teamsize) {
+		super();
+		this.name = name;
+		this.company = company;
+		this.id = id;
+		this.teamsize = teamsize;
+	}
 
 
+}
