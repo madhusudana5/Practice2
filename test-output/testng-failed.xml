@@ -3,11 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="RsponseValiation.ResponseTimeValidation">
         <methods>
           <include name="responseTimeValidationTest"/>
         </methods>
       </class> <!-- RsponseValiation.ResponseTimeValidation -->
+=======
+      <class name="Authentication.Oauth2Authentication">
+        <methods>
+          <include name="Oauth2Authentication"/>
+        </methods>
+      </class> <!-- Authentication.Oauth2Authentication -->
+>>>>>>> branch 'master' of https://github.com/madhusudana5/Practice2.git
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

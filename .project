@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>SDET-34-RestAssuredFramework</name>
+=======
+	<name>SDET-RestAssuredFW</name>
+>>>>>>> branch 'master' of https://github.com/madhusudana5/Practice2.git
 	<comment></comment>
 	<projects>
 	</projects>
